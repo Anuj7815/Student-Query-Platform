@@ -1,0 +1,18 @@
+.footer{
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.864);
+    position:relative;
+    bottom: 0;
+    margin-top: 60px;
+}
+
+.content{
+    width: 100%;
+    text-align: center;
+    color: white;
+    
+}
+.content p{
+   margin-top: 20px;
+}

@@ -1,84 +1,64 @@
-.account {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  height: 92vh;
+
+
+.profile-background{
+     width: 100%;
+     height: 30vh;
+     background-image: url("profile-bg.jpg");
 }
 
-.accountleft {
-  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+.left-profile{
+     width: 50%;
+     position: absolute;
+     padding: 20px;
+     margin: 2% 7%;
+     
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2vmax;
-  box-sizing: border-box;
-  overflow-y: auto;
 }
-.accountright {
-  padding: 2vmax;
-  box-sizing: border-box;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.left-profile img{
+     width: 25%;
+     height: 25%;
+     border-radius: 50%;
 }
-
-.accountright img:hover {
-  transform: scale(1.1);
+.profile-name{
+     color: white;
+     margin-left: 5px;
+     margin: -20% 28%;
+     font-size: 19px;
 }
 
-.accountright img {
-  transition: all 0.5s;
+.right-profile{
+     width: 30%;
+     position: absolute;
+     right: 0;
+     color: white;
+     margin-top: 4%;
+}
+.right-profile h1{
+     display: inline-block;
+}
+.right-profile p{
+     display: inline-block;
 }
 
-.accountright > h5 {
-  margin: 2vmax;
+.right-profile button{
+     padding: 15px 29px ;
+     background-color: #cf2e2e;
+     color: white;
+     margin-bottom: 30px;
+     margin-left: 50%;
 }
-
-.accountright > a {
-  color: rgb(73, 73, 73);
-  text-decoration: none;
-  font: 100 1.2rem "Roboto";
-  text-align: center;
-  margin-top: 2vmax;
-  padding: 0.5vmax 1vmax;
-  transition: all 0.5s;
+.details{
+     display: flex;
+     text-align: center;
 }
-
-.accountright > a:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+.details h1{
+     font-weight: 400;
 }
-.accountright > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1vmax;
+.details p{
+     font-size: 19px;
+     letter-spacing: 2.5px;
+     font-weight: 300;
 }
-
-.accountright > div > button:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
-}
-.accountright > div > button {
-  border: none;
-  background-color: white;
-  cursor: pointer;
-  transition: all 0.5s;
-  padding: 0.5vmax 1vmax;
-}
-
-@media screen and (max-width: 600px) {
-  .account {
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .accountleft {
-    padding: 0;
-    min-height: 90vh;
-  }
-
-  .accountright > a {
-    font: 100 1rem "Roboto";
-    margin-top: 6vw;
-  }
+.page{
+     margin-left: 15px;
 }

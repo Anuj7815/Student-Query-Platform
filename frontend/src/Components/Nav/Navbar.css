@@ -1,0 +1,34 @@
+.main-nav{
+    width: 100%;
+    height: 7vh;
+    background-color: white;
+    padding-top: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.519);
+}
+.left{
+     display:inline-block;
+}
+.left img{
+      width: 10%;
+     
+      margin-left: 30px;
+}
+.right{
+     position: absolute;
+     display: inline-block;
+     right: 2%;
+}
+a{
+    margin-right: 18px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight:100;
+    color: black;
+    cursor: pointer;
+    
+}
+.main-nav button{
+     padding: 12px 20px;
+     background-color: #cf2e2e;
+     color: white;
+}

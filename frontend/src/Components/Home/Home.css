@@ -1,52 +1,38 @@
-.home {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  height: 100vh;
+.upper-part{
+      width: 100%;
+     height: 26vh;
+     background: url("banner.jpeg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding-top: 100px;
 }
-
-.homeleft {
-  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
-
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2vmax;
-  box-sizing: border-box;
+.description{
+     text-align: center;
 }
-.homeright {
-  padding: 2vmax;
-  box-sizing: border-box;
-  overflow-y: auto;
+.description h1{
+     color: white;
+      word-spacing: 3px;
+      font-size: 45px;
 }
-
-.homeUser {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.507);
-  transition: all 0.5s;
+.description p{
+     color: white;
+     font-weight: 500;
+     margin-top: 10px;
+   
+     font-size: 20px;
 }
-.homeUser > img {
-  height: 3vmax;
-  width: 3vmax;
-  margin: 1vmax;
-  border-radius: 100%;
-  border: 3px solid rgb(255, 201, 201);
+.description input{
+     width: 55%;
+     height: 45px;
+     margin-top: 15px;
+     color: black;
+     font-size: 15px;
 }
-
-.homeUser:hover {
-  transform: translateY(-10px);
-}
-
-@media screen and (max-width: 600px) {
-  .home {
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .homeleft {
-    padding: 0;
-    min-height: 90vh;
-  }
+.description button{
+     padding: 17px 22px;
+     background-color:#cf2e2e;
+     border: none;
+     color: white;
+     margin-left: 10px;
+     font-size: 16px;
 }

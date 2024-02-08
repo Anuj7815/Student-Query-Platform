@@ -2,7 +2,7 @@ const User = require("../models/User");
 const Post = require("../models/Post");
 const { sendEmail } = require("../middlewares/sendEmail");
 const crypto = require("crypto");
-const cloudinary = require("cloudinary");
+// const cloudinary = require("cloudinary");
 
 exports.register = async (req, res) => {
   try {
@@ -15,15 +15,16 @@ exports.register = async (req, res) => {
         .json({ success: false, message: "User already exists" });
     }
 
-    const myCloud = await cloudinary.v2.uploader.upload(avatar, {
-      folder: "avatars",
-    });
+    // const myCloud = await cloudinary.v2.uploader.upload(avatar, {
+    //   folder: "avatars",
+    // });
 
     user = await User.create({
       name,
       email,
       password,
-      avatar: { public_id: myCloud.public_id, url: myCloud.secure_url },
+      // avatar: { public_id: myCloud.public_id, url: myCloud.secure_url },
+      avatar:{}
     });
 
     const token = await user.generateToken();
@@ -203,15 +204,15 @@ exports.updateProfile = async (req, res) => {
       user.email = email;
     }
 
-    if (avatar) {
-      await cloudinary.v2.uploader.destroy(user.avatar.public_id);
+    // if (avatar) {
+    //   await cloudinary.v2.uploader.destroy(user.avatar.public_id);
 
-      const myCloud = await cloudinary.v2.uploader.upload(avatar, {
-        folder: "avatars",
-      });
-      user.avatar.public_id = myCloud.public_id;
-      user.avatar.url = myCloud.secure_url;
-    }
+    //   const myCloud = await cloudinary.v2.uploader.upload(avatar, {
+    //     folder: "avatars",
+    //   });
+    //   user.avatar.public_id = myCloud.public_id;
+    //   user.avatar.url = myCloud.secure_url;
+    // }
 
     await user.save();
 
@@ -236,7 +237,7 @@ exports.deleteMyProfile = async (req, res) => {
     const userId = user._id;
 
     // Removing Avatar from cloudinary
-    await cloudinary.v2.uploader.destroy(user.avatar.public_id);
+    // await cloudinary.v2.uploader.destroy(user.avatar.public_id);
 
     await user.remove();
 
@@ -250,7 +251,7 @@ exports.deleteMyProfile = async (req, res) => {
     // Delete all posts of the user
     for (let i = 0; i < posts.length; i++) {
       const post = await Post.findById(posts[i]);
-      await cloudinary.v2.uploader.destroy(post.image.public_id);
+      // await cloudinary.v2.uploader.destroy(post.image.public_id);
       await post.remove();
     }
 

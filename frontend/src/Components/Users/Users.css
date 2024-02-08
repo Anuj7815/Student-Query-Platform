@@ -1,0 +1,36 @@
+.user-box{
+      width: 18%;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      margin-top: 20px;
+      
+}
+.user-box img{
+      width: 100%;
+      height: 200px;
+      border-radius: 20px;
+      
+}
+.user-box h2{
+      text-align: center;
+}
+
+.row-box{
+      display: flex;
+      text-align: center;
+      margin-top: 10px;
+}
+.box1{
+      margin-left: 20px;
+}
+.box1 h1{
+      font-weight: 300;
+}
+
+.user-box button{
+       padding: 9px 22px;
+       background-color: #cf2e2e;
+       color: white;
+       margin-left: 50px;
+       margin-top: 10px;
+}

@@ -1,72 +1,42 @@
-import React, { useEffect, useState } from "react";
-import "./Login.css";
-import { Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../../Actions/User";
-import { useAlert } from "react-alert";
+import React from 'react'
+import './Login.css'
+import { useState } from 'react'
+import {useDispatch} from 'react-redux'
+import { loginUser } from '../../Action/User'
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
   const dispatch = useDispatch();
-  const alert = useAlert();
-
-  const { error } = useSelector((state) => state.user);
-  const { message } = useSelector((state) => state.like);
-
-  const loginHandler = (e) => {
-    e.preventDefault();
-
-    dispatch(loginUser(email, password));
-  };
-
-  useEffect(() => {
-    if (error) {
-      alert.error(error);
-      dispatch({ type: "clearErrors" });
-    }
-    if (message) {
-      alert.success(message);
-      dispatch({ type: "clearMessage" });
-    }
-  }, [alert, error, dispatch, message]);
-
+  
+   
+   const loginHandler = (e)=>{
+       e.preventDefault();
+       dispatch(loginUser(email,password));
+       
+   }
   return (
-    <div className="login">
-      <form className="loginForm" onSubmit={loginHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          Social Aap
-        </Typography>
+    <>
+          <div className="login">
+                <h1>Sign In To Your Account</h1>
+            </div>
+            <div className="login-form" >
+                <form className="left-part" onSubmit={loginHandler}>
+                    <h3>Login</h3>
+                    <input type="email" placeholder='Enter Email'  required value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                    <br />
+                    <input type="password" placeholder='password' required value={password} onChange={(e)=>setPassword(e.target.value)} />
+                    <br />
+                    <button type='submit'>Login</button>
+                </form>
+                <div className="right-part">
+                  <h3>Register Now</h3>
+                  <p>When you Register, you agree to our User Agreement and acknowledge reading our User Privacy Notice.</p>
+                  <button>Create an Account</button>
+                </div>
+            </div>
+    </>
+  )
+}
 
-        <input
-          type="email"
-          placeholder="Email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <input
-          type="password"
-          placeholder="Password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <Link to="/forgot/password">
-          <Typography>Forgot Password?</Typography>
-        </Link>
-
-        <Button type="submit">Login</Button>
-
-        <Link to="/register">
-          <Typography>New User?</Typography>
-        </Link>
-      </form>
-    </div>
-  );
-};
-
-export default Login;
+export default Login
