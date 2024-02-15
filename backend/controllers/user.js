@@ -2,7 +2,7 @@ const User = require("../models/User");
 const Post = require("../models/Post");
 const { sendEmail } = require("../middlewares/sendEmail");
 const crypto = require("crypto");
-// const cloudinary = require("cloudinary");
+const cloudinary = require("cloudinary");
 
 exports.register = async (req, res) => {
   try {
@@ -15,16 +15,15 @@ exports.register = async (req, res) => {
         .json({ success: false, message: "User already exists" });
     }
 
-    // const myCloud = await cloudinary.v2.uploader.upload(avatar, {
-    //   folder: "avatars",
-    // });
+    const myCloud = await cloudinary.v2.uploader.upload(avatar, {
+      folder: "avatars",
+    });
 
     user = await User.create({
       name,
       email,
       password,
-      // avatar: { public_id: myCloud.public_id, url: myCloud.secure_url },
-      avatar:{}
+      avatar: { public_id: myCloud.public_id, url: myCloud.secure_url },
     });
 
     const token = await user.generateToken();
@@ -356,9 +355,7 @@ exports.getUserProfile = async (req, res) => {
 
 exports.getAllUsers = async (req, res) => {
   try {
-    const users = await User.find({
-      name: { $regex: req.query.name, $options: "i" },
-    });
+    const users = await User.find({ });
 
     res.status(200).json({
       success: true,

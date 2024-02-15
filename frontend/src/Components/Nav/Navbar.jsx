@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import logo  from '../Nav/logo1.jpeg'
+import logo  from '../Nav/logo2.png'
 const Header = () => {
   return (
     <>
@@ -12,8 +12,8 @@ const Header = () => {
               <a href="/">HOME</a>
               <a href="/users">USERS</a>
               <a href="/profile">PROFILE</a>
-              <a href="/post"> 
-              <button>Create Post</button>
+              <a href="/newquery"> 
+              <button>Create Query</button>
               </a>
           </div>
           

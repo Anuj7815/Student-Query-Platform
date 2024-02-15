@@ -1,30 +1,51 @@
 import React from 'react'
+import { Avatar } from '@mui/material'
+import { Link } from 'react-router-dom'
 import './Users.css'
-import pic from '../Users/my_img.jpeg'
 
-const Users = () => {
+const Users = ({
+  userId,
+  name,
+  avator,
+  followers,
+  followings,
+  post
+}) => {
   return (
     <>
-        <div className="user-box">
-               
-                <img src={pic} alt="" />
-                <h2>anshul bansal</h2>
-                <div className="row-box">
-                       <div className="box1">
-                         <h1>106</h1>
-                         <p>Followers</p>
-                       </div>
-                       <div className="box1">
-                         <h1>78</h1>
-                         <p>Followings</p>
-                       </div>
-                       <div className="box1">
-                         <h1>12</h1>
-                         <p>Post</p>
-                       </div>
-                </div>
-                <button>Show More</button>
+
+      <div className="user-box">
+        <div className="first-section">
+          <div className="image-name-section">
+            <Avatar src={avator}
+              style={{ width: '80px', height: '80px' }}
+            />
+            <h2>{name}</h2>
+          </div>
+          <div className="button-section">
+            
+           <Link to={`/user/${userId}`} className='user-btn'>
+           <button> 
+              Show More
+            </button>
+           </Link>
+          </div>
         </div>
+        <div className="second-section">
+          <div className="column-box">
+            <h2>{post}</h2>
+            <h5>Post</h5>
+          </div>
+          <div className="column-box">
+            <h2>{followers}</h2>
+            <h5>Followers</h5>
+          </div>
+          <div className="column-box">
+            <h2>{followings}</h2>
+            <h5>Followings</h5>
+          </div>
+        </div>
+      </div>
 
     </>
   )

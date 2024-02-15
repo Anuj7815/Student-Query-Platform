@@ -7,18 +7,18 @@
 }
 
 .left-profile{
-     width: 50%;
+     width: 30%;
      position: absolute;
      padding: 20px;
      margin: 2% 7%;
      
 
 }
-.left-profile img{
-     width: 25%;
-     height: 25%;
+/* .left-profile img{
+     width: 20%;
+     height: 10%;
      border-radius: 50%;
-}
+} */
 .profile-name{
      color: white;
      margin-left: 5px;
@@ -46,6 +46,7 @@
      color: white;
      margin-bottom: 30px;
      margin-left: 50%;
+     cursor: pointer;
 }
 .details{
      display: flex;

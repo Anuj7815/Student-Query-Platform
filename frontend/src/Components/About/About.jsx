@@ -8,7 +8,7 @@ const About = () => {
     return (
         <div>
             <div className="bannar">
-                <h1><span>INFOCENTER</span>-SOLUTIONS OF ALL THE PROBLEMS</h1>
+                <h1>SOLUTIONS OF ALL THE PROBLEMS</h1>
             </div>
             <div className="working-nav">
                 <h1>How It Works</h1>

@@ -7,10 +7,10 @@
 }
 .left{
      display:inline-block;
+     margin-top: -20px;
 }
 .left img{
-      width: 10%;
-     
+      width: 27%;
       margin-left: 30px;
 }
 .right{
@@ -31,4 +31,5 @@ a{
      padding: 12px 20px;
      background-color: #cf2e2e;
      color: white;
+     cursor: pointer;
 }
