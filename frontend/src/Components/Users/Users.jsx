@@ -18,7 +18,7 @@ const Users = ({
         <div className="first-section">
           <div className="image-name-section">
             <Avatar src={avator}
-              style={{ width: '80px', height: '80px' }}
+              style={{ width: '70px', height: '70px' }}
             />
             <h2>{name}</h2>
           </div>

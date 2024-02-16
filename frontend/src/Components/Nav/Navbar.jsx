@@ -4,11 +4,11 @@ import logo  from '../Nav/logo2.png'
 const Header = () => {
   return (
     <>
-         <div className="main-nav">
-            <div className="left">
+         <div className="navbar-section">
+            <div className="image-section-left">
                 <img src={logo} alt="" />
             </div>
-          <div className="right">
+          <div className="right-section">
               <a href="/">HOME</a>
               <a href="/users">USERS</a>
               <a href="/profile">PROFILE</a>

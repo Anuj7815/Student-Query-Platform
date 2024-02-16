@@ -26,9 +26,12 @@
      font-size: medium;
    }
    
-   .author-name p{
-     font-size: small;
-     margin-top: 5px;
+   .author-name h3{
+     font-size: 15px;
+     margin-top: 7px;
+     font-weight: 300;
+     
+
    }
    
    .post-description-section-button button{

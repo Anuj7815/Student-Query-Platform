@@ -57,7 +57,7 @@ const Post = ({
         <div className="post-description-section">
           <h2>{caption}</h2>
           <div className="author-name">
-           <p> <a href>{ownerName}</a></p>
+           <h3>{ownerName}</h3>
           </div>
           <div className="post-description-section-button">
             <button  onClick={() => setCommentToggle(!commentToggle)}>Give Solution</button>

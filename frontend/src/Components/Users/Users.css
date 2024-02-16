@@ -24,6 +24,7 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      margin-top: 10px;
     }
     
 .image-name-section h2{
@@ -82,3 +83,67 @@
 .column-box h5{
       color: #cf2e2e;
 }
+
+
+
+@media screen and (max-width:1260px){
+      .user-box{
+        height: 25vh;
+      }
+    
+      .user-box:hover{
+        background-color: lightcyan;
+        transition: 0.5s ease-out;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    @media screen and (max-width:1024px){
+      .user-box{
+        width: 23%;
+        height: 20vh;
+        padding: 7px;
+      }
+    
+      .user-box:hover{
+        background-color: lightcyan;
+        transition: 0.5s ease-out;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    @media screen and (max-width:800px){
+      .user-box{
+        width: 35%;
+      }
+    
+      .user-box:hover{
+        background-color: lightcyan;
+        transition: 0.5s ease-out;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    @media screen and (max-width:620px){
+      .user-box{
+        width: 70%;
+      }
+    
+      .user-box:hover{
+        background-color: lightcyan;
+        transition: 0.5s ease-out;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    @media screen and (max-width:480px){
+      .user-box{
+        width: 100%;
+      }
+    
+      .user-box:hover{
+        background-color: lightcyan;
+        transition: 0.5s ease-out;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
