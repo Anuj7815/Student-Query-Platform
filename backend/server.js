@@ -1,7 +1,9 @@
 const app = require("./app");
+// const express = require('express');
 const { connectDatabase } = require("./config/database");
 const cloudinary = require("cloudinary");
 connectDatabase();
+const path = require('path');
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,

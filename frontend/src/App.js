@@ -14,6 +14,8 @@ import Allusers from './Components/AllUsers/Allusers'
 import NewPost from './Components/NewPost/NewPost'
 import Signup from './Components/Signup/Signup'
 import UserProfile from './Components/UserProfile/UserProfile'
+
+
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -36,13 +38,9 @@ const App = () => {
            <Route path='/newquery' element={isAuthenticated?<NewPost/>:<About/>}/>
            <Route path='/register' element={isAuthenticated?<Home/>:<Signup/>}/> 
            <Route path='/user/:id' element={isAuthenticated?<UserProfile/>:<Login/>}/> 
-
-
-
         </Routes>
       </Router>
       <Footer/>
-
     </div>
   )
 }

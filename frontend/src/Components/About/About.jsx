@@ -1,6 +1,6 @@
 import React from 'react'
 import './About.css'
-import  create_img from '../About/Create.png'
+import create_img from '../About/Create.png'
 import post_img from '../About/post.png';
 import find_img from '../About/find.png';
 

@@ -103,7 +103,7 @@ const UserProfile = () => {
             <div className="right-profile">
                 {
                     myProfile ? null : (
-                        <button type='submit' disabled={followLoading} onClick={followHandler} style={{ background: following ? "red" : "green" }}>
+                        <button type='submit' disabled={followLoading} onClick={followHandler} style={{ background: following ? "#cf2e2e" : "#cf2e2e" }}>
                             {
                                 following ? "UnFollow" : "Follow"
                             }
