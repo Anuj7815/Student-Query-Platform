@@ -57,9 +57,9 @@ const Home = () => {
               postImage={post.image.url}
               postId={post._id}
               caption={post.caption}
-              ownerImage={post.owner.avatar.url}
-              ownerName={post.owner.name}
-              ownerId={post.owner._id}
+              // ownerImage={post.owner.avatar.url}
+              // ownerName={post.owner.name}
+              // ownerId={post.owner._id}
               comments={post.comments}
             />
           )) :

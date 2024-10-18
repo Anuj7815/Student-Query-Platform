@@ -20,7 +20,7 @@ const Users = ({
             <Avatar src={avator}
               style={{ width: '50px', height: '50px' }}
             />
-            <h2>{name}</h2>
+            <h3>{name}</h3>
           </div>
           <div className="button-section">
             

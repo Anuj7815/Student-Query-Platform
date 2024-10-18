@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const cookieParser = require("cookie-parser");
 const path = require("path");
-
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
@@ -26,18 +25,18 @@ app.use("/api/v1", user);
 //   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 // });
 
-const __dirname1 = path.resolve();
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname1,"/frontend/build")));
+// const __dirname1 = path.resolve();
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname1,"/frontend/build")));
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname1,"frontend","build","index.html"));
-  });
-}
-else {
-  app.get('/', (req, res) => {
-    res.send("API is Running Successfully.");
-  });
-}
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname1,"frontend","build","index.html"));
+//   });
+// }
+// else {
+//   app.get('/', (req, res) => {
+//     res.send("API is Running Successfully.");
+//   });
+// }
 
 module.exports = app;
